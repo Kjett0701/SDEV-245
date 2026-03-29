@@ -1,4 +1,4 @@
-Hash.py 
+hash.py 
 
 hash.py is a small program that asks the user whether they want to hash a string or a file. After the user chooses, the program either takes the typed‑in string or reads the file in bytes, and then generates a hash from it. It’s a simple way to show how hashing works and how data can be turned into a secure, fixed‑length value. 
 
