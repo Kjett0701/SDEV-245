@@ -1,0 +1,5 @@
+This solution protects the data’s confidentiality by encrypting the user’s input with a symmetric key, ensuring that only someone with the key can read the original message. It maintains integrity by hashing the data before and after encryption, then comparing the two hashes to confirm that nothing was altered during the process. The script also supports availability because it runs locally, requires no external services, and allows the user to access, encrypt, decrypt, and verify their data at any time. 
+
+Here’s a short, natural explanation you can drop right into your project:
+
+Entropy plays an important role in this implementation because it ensures that the encryption key is unpredictable and secure. When the script generates a Fernet key, it relies on a source of strong system entropy to create a random value that attackers can’t guess or reproduce. This randomness is what makes the encryption trustworthy. Without good entropy, keys could become predictable, weakening the entire system. By using a securely generated key, the script ensures that the encrypted data stays protected and that only someone with that unique key can decrypt it.
