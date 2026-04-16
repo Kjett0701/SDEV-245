@@ -1,0 +1,15 @@
+# Bad code. 
+url = input("Enter URL: ")
+response = requests.get(url)
+print(response.text) 
+
+# Good code. 
+
+allowed = ["https://example.com"]
+
+url = input("Enter URL: ")
+if url in allowed:
+    response = requests.get(url)
+    print(response.text)
+else:
+    print("URL not allowed")

@@ -1,0 +1,7 @@
+<!-- Bad code. -->
+
+<script src="https://cdn.example.com/lib.js"></script> 
+
+<!-- God code. --> 
+
+<script src="/static/lib.js"></script>

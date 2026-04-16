@@ -1,0 +1,10 @@
+// Bad code.
+if (inputPassword.equals(user.getPassword())) { 
+    // Login success
+} 
+
+// Good code. 
+
+if (passwordHasher.verify(inputPassword, user.getPassword())) {
+    // Login success
+}

@@ -1,0 +1,15 @@
+# Bad code. 
+@app.route('/account/<user_id>')
+def get_account(user_id):
+    user = db.query(User).filter_by(id=user_id).first()
+    return jsonify(user.to_dict()) 
+
+
+# Good code. 
+@app.route('/account/<user_id>')
+def get_account(user_id):
+    if not current_user or current_user.id != user_id:
+        return "Not allowed", 403
+
+    user = db.query(User).filter_by(id=user_id).first()
+    return jsonify(user.to_dict())
